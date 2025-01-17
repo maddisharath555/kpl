@@ -2,6 +2,10 @@
 
 //https://docs.google.com/spreadsheets/d/e/2PACX-1vSEeSfSVAICw1QNSH81qNRitVvtxThkEUY7-r9tfZo8753zeoB6xvfMyjh8I1FjOaLz6Bq7ttlseqrO/pubhtml?gid=0&single=true
 
+//2PACX-1vSEeSfSVAICw1QNSH81qNRitVvtxThkEUY7-r9tfZo8753zeoB6xvfMyjh8I1FjOaLz6Bq7ttlseqrO
+
+//https://sheets.googleapis.com/v4/spreadsheets/14M7Qa1BwojNCFGwep-TFbTaQTIW2578fSf2znyv8OOM/values/Sheet1?key=AIzaSyBEywIz_2UCzV4rJ6pTuU-yrb7krASasjU
+
 const spreadsheetId = '14M7Qa1BwojNCFGwep-TFbTaQTIW2578fSf2znyv8OOM';
 
 // Replace with your API Key
