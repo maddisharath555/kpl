@@ -63,10 +63,20 @@ async function fetchGoogleSheetData() {
             const row = document.createElement('tr');
             
             // Loop through each cell in the row and create a table cell for each
+		const j=1;
             rows[i].forEach(cell => {
                 const cellElement = document.createElement('td');
-                cellElement.textContent = cell;
+                if(j==12){
+			cellElement.textContent = "<img src=\"https://drive.google.com/uc?export=download&id=".concat(cell.substr(-33),"\">");
+		}
+		else{
+		    cellElement.textContent = cell;
+		}
+		//=IMAGE(concat("https://drive.google.com/uc?export=download&id=",right('Form Responses 1'!L2,33)))
+		//https://drive.google.com/open?id=1gJ3Y3CIg51OGKwJ5D7VsPCzjjLVFDAVV
+		    
                 row.appendChild(cellElement);
+		j++;
             });
             
             // Append the row to the table
