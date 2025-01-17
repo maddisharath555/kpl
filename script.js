@@ -1,8 +1,11 @@
 // Replace with your actual Spreadsheet ID
-const spreadsheetId = '1FABCdEXAMPLE_URL_GOESHERE';
+
+//https://docs.google.com/spreadsheets/d/e/2PACX-1vSEeSfSVAICw1QNSH81qNRitVvtxThkEUY7-r9tfZo8753zeoB6xvfMyjh8I1FjOaLz6Bq7ttlseqrO/pubhtml?gid=0&single=true
+
+const spreadsheetId = '2PACX-1vSEeSfSVAICw1QNSH81qNRitVvtxThkEUY7-r9tfZo8753zeoB6xvfMyjh8I1FjOaLz6Bq7ttlseqrO';
 
 // Replace with your API Key
-const apiKey = 'YOUR_GOOGLE_API_KEY';
+const apiKey = 'AIzaSyBEywIz_2UCzV4rJ6pTuU-yrb7krASasjU';
 
 // Construct the URL for Google Sheets API v4
 const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/Sheet1?key=${apiKey}`;
