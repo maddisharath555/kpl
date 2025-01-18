@@ -1,0 +1,448 @@
+
+<html>
+	<head title="KPL-2 Registered Players">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<style>
+			* { 
+				  margin : 0;
+				  padding: 0;
+				  font-familly : "Poppins", sans-serif;
+			}
+			body {
+			    
+			  background-color: #ede7b2;
+			  
+			}
+
+			.container {
+			  position : relative;
+			  //height : 1200px;
+			  max-width : 900px;
+			  margin: 20px;
+			  //top : -40%;
+			  //left: 500px;
+			  
+			  align-items : center;
+			  //justify-content : center;
+			  display : grid;
+			  grid: auto/ auto auto auto auto auto;
+			  padding : 10px;  
+			}
+
+			.container .card {
+			  position: relative;
+			  max-width : 200px;
+			  height : 200px;  
+			  //background-color : #fff;
+			  margin : 30px 10px;
+			  padding : 20px 15px;
+			  
+			  display : flex;
+			  flex-direction : column;
+			  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+			  transition : 0.3s ease-in-out;
+			  border-radius : 20px;
+			}
+			.container .card:hover {
+			  height : 390px;
+			  max-width : 320px;
+			}
+
+
+			.container .card .image {
+			  position : relative;
+			  width : 200px;
+			  height : 200px;
+			  border-radius : 100px;
+			  top : 0%;
+			  left: 0px;
+			  box-shadow : 0 15px 20px rgba(0,0,0,0.2);
+			 // z-index : 0;
+			}
+
+			.container .card .image img {
+			  //max-width : 150px;
+		//	  //border-radius : 90px;
+			  
+			  margin: auto;
+			  width: 200px;
+			  height: 200px;
+			  border-radius: 150px;
+			  -webkit-border-radius: 150px;
+			  -moz-border-radius: 150px;
+			  box-shadow : 0 15px 20px rgba(0,0,0,0.5);
+			  
+			}
+
+			.container .card .content {
+			  position : relative;
+			  top : -140px;
+			  //height:1000px;
+			  padding : 10px 20px;
+			  color : #111;
+			  text-align : center;
+			  visibility : hidden;
+			  opacity : 0;
+			  transition : 0.3s ease-in-out;
+				
+			}
+
+			.container .card:hover .content {
+			
+				width : 450px;
+				height : 700px;
+			   margin-top : 60px;
+			   margin-left : -10px;
+			   //margin-right : -150px;
+			   visibility : visible;
+			   opacity : 1;
+			   transition-delay: 0.2s;
+			   
+			  
+			}
+			.container .card:hover .image {
+			   top : -40%;
+			  left: 8px;
+			  
+			}
+			.container .card:hover {
+			background-color : #fff;
+			}
+			h1 {
+			   text-align: center;
+			   font-size: 50px;
+			   font-weight:900;
+			   
+			  
+			}
+			#banner {
+			   align: center;
+			   width:1250px;
+			   
+			  
+			}
+			
+			
+		
+			
+			
+			//https://drive.google.com/file/d/1YFJtypPx6mffNcxey6kH31Io4myjT004/view?usp=sharing   ----- google drive link
+			//https://lh3.googleusercontent.com/d/1hg84-8hSMJ282QNHFGUQGMqLtWV-jCD0=s220 ----- banner link
+			//https://drive.google.com/file/d/1hg84-8hSMJ282QNHFGUQGMqLtWV-jCD0/view?usp=sharing
+			
+			
+		</style>
+	
+	
+	</head>
+
+<body>
+
+<img id="banner" src="https://lh3.googleusercontent.com/d/1hg84-8hSMJ282QNHFGUQGMqLtWV-jCD0"></img>
+		
+
+
+
+<!-- 
+
+<div class = container>
+ 
+	
+	<div class = card>
+		<div class = image>
+			<img href = "#" src=https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg>
+		</div>
+		<div class = content>
+			<table id="profile" title="">
+				<tbody>
+				
+						<h3 style="text-align:left">maddi sharath kumar</h3>
+						<tr><td><b>Father:</b> Rajasab </td></tr>
+						<tr><td><b>Type:</b> All Rounder</td></tr>
+						<tr><td><b>bowling:</b> Medium Fast</td></tr>
+						<tr><td><b>Jersy Name:</b> Kohli</td></tr>
+						<tr><td><b>Jersy No:</b> 18</td></tr>
+						<tr><td><b>Fav Player:</b> Virat Kohli</td></tr>
+						<tr><td><b>Fav Shot:</b> Cover Drive</td></tr>
+						<tr><td><b>Fav IPL Team:</b> RCB</td></tr>
+						<tr><td><b>Hometown:</b> Katriyal</td></tr>
+						<tr><td><b>Jersy Size:</b> L</td></tr>
+						<tr><td><b>Phone No:</b> 8555959685</td></tr>
+						<!--<tr><td><b>Born:</b>YYYY</td></tr>
+						<tr><td><b>payment photo</td></tr>
+				</tbody>
+			</table>
+		</div>
+	 
+	</div>
+
+
+
+	<div class = card>
+		<div class = image>
+			<img href = "#" src=https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg>
+		</div>
+		<div class = content>
+			<table id="profile" title="">
+				<tbody>
+				
+						<h3 style="text-align:left">maddi sharath kumar</h3>
+						<tr><td><b>Father:</b> Rajasab </td></tr>
+						<tr><td><b>Type:</b> All Rounder</td></tr>
+						<tr><td><b>bowling:</b> Medium Fast</td></tr>
+						<tr><td><b>Jersy Name:</b> Kohli</td></tr>
+						<tr><td><b>Jersy No:</b> 18</td></tr>
+						<tr><td><b>Fav Player:</b> Virat Kohli</td></tr>
+						<tr><td><b>Fav Shot:</b> Cover Drive</td></tr>
+						<tr><td><b>Fav IPL Team:</b> RCB</td></tr>
+						<tr><td><b>Hometown:</b> Katriyal</td></tr>
+						<tr><td><b>Jersy Size:</b> L</td></tr>
+						<tr><td><b>Phone No:</b> 8555959685</td></tr>
+						<!--<tr><td><b>Born:</b>YYYY</td></tr>
+						<tr><td><b>payment photo</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</div> 
+	
+	
+	<div class = "showdata" id="showdata" style="visibility:hidden">
+		<div class = image1>
+			<img href = "#" src=https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg>
+		</div>
+		<div class = content>
+			<table id="profile" title="">
+				<tbody>
+				
+						<h3 style="text-align:left">maddi sharath kumar</h3>
+						<tr><td><b>Father:</b> Rajasab </td></tr>
+						<tr><td><b>Type:</b> All Rounder</td></tr>
+						<tr><td><b>bowling:</b> Medium Fast</td></tr>
+						<tr><td><b>Jersy Name:</b> Kohli</td></tr>
+						<tr><td><b>Jersy No:</b> 18</td></tr>
+						<tr><td><b>Fav Player:</b> Virat Kohli</td></tr>
+						<tr><td><b>Fav Shot:</b> Cover Drive</td></tr>
+						<tr><td><b>Fav IPL Team:</b> RCB</td></tr>
+						<tr><td><b>Hometown:</b> Katriyal</td></tr>
+						<tr><td><b>Jersy Size:</b> L</td></tr>
+						<tr><td><b>Phone No:</b> 8555959685</td></tr>
+						<!--<tr><td><b>Born:</b>YYYY</td></tr>
+						<tr><td><b>payment photo</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</div> 
+	
+		 
+
+
+
+	  <!-- ---------------------------dummy end --------------------------------------------- 
+	  
+	  
+  
+     
+	
+	
+</div>
+
+-->	
+
+<div class="container" id="profilesContainer">
+
+</div>
+
+    <table id="data-table" title="KPL 2 registration details">
+	
+        <tbody>
+        </tbody>
+    </table>
+
+
+</body>
+
+
+<script>
+    
+
+//--------------------------------------------------------------------------------------
+
+  //main link : https://docs.google.com/spreadsheets/d/1hUzQAQfqo9eHo3m-GnkWVFt0kjcqA3ApFfM-vl1reyE/edit?gid=935556531#gid=935556531
+  // Replace with your actual Spreadsheet ID
+
+// test link :https://docs.google.com/spreadsheets/d/e/2PACX-1vSEeSfSVAICw1QNSH81qNRitVvtxThkEUY7-r9tfZo8753zeoB6xvfMyjh8I1FjOaLz6Bq7ttlseqrO/pubhtml?gid=0&single=true
+
+  //https://docs.google.com/spreadsheets/d/e/2PACX-1vRm9HiolMeM8D0j3O5_75pdr6ZvZlkSVSGM5yonQba-H-YUOYHoANUIKn-XjcGJ_tYOviyLqIJmaaeR/pubhtml?gid=935556531&single=true
+
+//https://sheets.googleapis.com/v4/spreadsheets/1hUzQAQfqo9eHo3m-GnkWVFt0kjcqA3ApFfM-vl1reyE/values/Sheet1?key=AIzaSyBEywIz_2UCzV4rJ6pTuU-yrb7krASasjU
+
+
+//    https://sheets.googleapis.com/v4/spreadsheets/1hUzQAQfqo9eHo3m-GnkWVFt0kjcqA3ApFfM-vl1reyE/values/Sheet1?key=AIzaSyBEywIz_2UCzV4rJ6pTuU-yrb7krASasjU
+    
+const spreadsheetId = '1hUzQAQfqo9eHo3m-GnkWVFt0kjcqA3ApFfM-vl1reyE';
+
+// Replace with your API Key
+const apiKey = 'AIzaSyBEywIz_2UCzV4rJ6pTuU-yrb7krASasjU';
+
+// Construct the URL for Google Sheets API v4
+const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/Form%20Responses%201?key=${apiKey}`;
+
+async function fetchGoogleSheetData() {
+    try {
+        // Fetch data from Google Sheets API
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        // Extract rows from the data
+        const rows = data.values;
+
+        // Get the table body element
+        const tableBody = document.querySelector('#profilesContainer');
+
+        // Loop through the rows (starting from row 1 to skip headers)
+        for (let i = 1; i < rows.length; i++) {
+		
+		// new code start //
+		const cardDivElement = document.createElement('div');
+		cardDivElement.classList.add('card');
+		
+		
+			let k=1;
+			const imgDivElement = document.createElement('div');
+			imgDivElement.classList.add('image');
+			const imgElement = document.createElement('img');
+			const contentDivElement = document.createElement('div');
+			contentDivElement.classList.add('content');
+			const tableElement = document.createElement('table');
+			tableElement.classList.add('profile');
+			
+			
+			
+			rows[i].forEach(cell => {
+               
+                if(k==12){		
+					imgElement.src = "https://lh3.googleusercontent.com/d/".concat(cell.substr(-33),"=s220");
+					imgDivElement.appendChild(imgElement);
+					cardDivElement.prepend(imgDivElement);
+				}
+				else if(k==16 || k==17 || k==1 || k==13){	
+				}
+				else{
+					const rowElement = document.createElement('tr');
+					const rowdataElement = document.createElement('td');
+					const boldElement = document.createElement('b');
+					if (k==2) boldElement.textContent="Name:";
+					if (k==3) boldElement.textContent="Father:";
+					if (k==4) boldElement.textContent="Type:";
+					if (k==5) boldElement.textContent="Bowling:";
+					if (k==6) boldElement.textContent="JersyName:";
+					if (k==7) boldElement.textContent="JersyNo:";
+					if (k==8) boldElement.textContent="Fav Player:";
+					if (k==9) boldElement.textContent="FavShot:";
+					if (k==10) boldElement.textContent="Fav IPL Team:";
+					if (k==11) boldElement.textContent="Home:";
+					//if (k==13) boldElement.textContent=":";
+					if (k==14) boldElement.textContent="JersySize:";
+					if (k==15) boldElement.textContent="PhoneNo:";
+					//if (k==18) boldElement.textContent=":";
+					//if (k==19) boldElement.textContent=":";
+					
+					rowdataElement.appendChild(boldElement);
+					//rowdataElement.textContent=cell;
+					const plainElement = document.createElement('p');
+					plainElement.textContent = cell;
+					rowElement.appendChild(rowdataElement);
+					rowElement.appendChild(plainElement);
+					tableElement.appendChild(rowElement);
+					
+				}
+				k++;
+            });
+			//paraElement.textContent = para;
+			
+			contentDivElement.appendChild(tableElement);
+			cardDivElement.appendChild(contentDivElement);
+			//cardDivElement.appendChild(cardDivElement);
+			
+			
+		tableBody.appendChild(cardDivElement);
+		
+		
+		
+		// new code  end //
+		
+		
+/*		
+        const row = document.createElement('tr');
+		
+		// new code //
+		
+		
+		
+		// new code end //
+						
+            // Loop through each cell in the row and create a table cell for each
+			
+			
+		let j=1;
+            rows[i].forEach(cell => {
+                const cellElement = document.createElement('td');
+                if(j==12){
+					const imgElement = document.createElement('img');
+					imgElement.src = "https://lh3.googleusercontent.com/d/".concat(cell.substr(-33),"=s220");
+					imgElement.width="90";
+					imgElement.height="100";
+					cellElement.padding="0px";
+					//working <img src="https://lh3.googleusercontent.com/d/1Y7OL-TOJcAf5JDhIRvR41W9MpTi9hsMB" height="100" width="80">
+					cellElement.appendChild(imgElement);
+					row.prepend(cellElement);
+					//https://lh3.googleusercontent.com/d/14mkZQAHFjnn1KDPltSc3xhWnZHjJoDZ3=s220
+				}
+				else if(j==16){
+					
+				}
+				else if(j==17){
+					const imgElement = document.createElement('img');
+					imgElement.src = "https://lh3.googleusercontent.com/d/".concat(cell.substr(-33),"=s220");
+					imgElement.width="90";
+					imgElement.height="100";
+					cellElement.padding="0px";
+					//working <img src="https://lh3.googleusercontent.com/d/1Y7OL-TOJcAf5JDhIRvR41W9MpTi9hsMB" height="100" width="80">
+					cellElement.appendChild(imgElement);
+					row.append(cellElement);
+				}
+				else{
+					cellElement.textContent = cell;
+					row.appendChild(cellElement);
+				}
+		//=IMAGE(concat("https://drive.google.com/uc?export=download&id=",right('Form Responses 1'!L2,33)))
+		//https://drive.google.com/open?id=1gJ3Y3CIg51OGKwJ5D7VsPCzjjLVFDAVV
+		    
+                //row.appendChild(cellElement);
+		j++;
+            });
+            
+			
+			const srNumber = document.createElement('td');
+						srNumber.textContent = i;
+						row.prepend(srNumber);
+			
+            // Append the row to the table
+            tableBody.appendChild(row);
+*/        
+		}
+    } catch (error) {
+        console.error('Error fetching Google Sheets data:', error);
+    }
+}
+
+// Call the function to fetch and display data
+document.addEventListener('DOMContentLoaded', fetchGoogleSheetData);
+
+
+    
+</script>
+     
+
+
+</html>
