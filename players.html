@@ -121,6 +121,14 @@
 			   
 			  
 			}
+			h3 {
+			   text-align: center;
+			   font-size: 50px;
+			   font-weight:900;
+			   
+			  
+			}
+			
 			
 			
 		
@@ -252,7 +260,9 @@
 
 </div>
 
-<a href="https://raw.githack.com/maddisharath555/kpl/main/players_list1.html" style="text-align:center; font-size:50px;">.....</a>
+
+<h3 class="count" id="count"></h3>
+<h3><a href="https://raw.githack.com/maddisharath555/kpl/main/players_list1.html" style="text-align:center; font-size:50px;">.....</a></h3>h3>
 
  
 
@@ -296,6 +306,9 @@ async function fetchGoogleSheetData() {
 
         // Get the table body element
         const tableBody = document.querySelector('#profilesContainer');
+		//let cnt=row.length-1;
+		
+		document.getElementById('count').innerHTML='Count: '.concat(rows.length-1);
 
         // Loop through the rows (starting from row 1 to skip headers)
         for (let i = 1; i < rows.length; i++) {
