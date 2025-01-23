@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katriyal Premier League </title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+
+<script>
+    
+
+//--------------------------------------------------------------------------------------
+
+  //main link : https://docs.google.com/spreadsheets/d/1hUzQAQfqo9eHo3m-GnkWVFt0kjcqA3ApFfM-vl1reyE/edit?gid=935556531#gid=935556531
+  // Replace with your actual Spreadsheet ID
+
+// test link :https://docs.google.com/spreadsheets/d/e/2PACX-1vSEeSfSVAICw1QNSH81qNRitVvtxThkEUY7-r9tfZo8753zeoB6xvfMyjh8I1FjOaLz6Bq7ttlseqrO/pubhtml?gid=0&single=true
+
+  //https://docs.google.com/spreadsheets/d/e/2PACX-1vRm9HiolMeM8D0j3O5_75pdr6ZvZlkSVSGM5yonQba-H-YUOYHoANUIKn-XjcGJ_tYOviyLqIJmaaeR/pubhtml?gid=935556531&single=true
+
+//https://sheets.googleapis.com/v4/spreadsheets/1hUzQAQfqo9eHo3m-GnkWVFt0kjcqA3ApFfM-vl1reyE/values/Sheet1?key=AIzaSyBEywIz_2UCzV4rJ6pTuU-yrb7krASasjU
+
+
+//    https://sheets.googleapis.com/v4/spreadsheets/1hUzQAQfqo9eHo3m-GnkWVFt0kjcqA3ApFfM-vl1reyE/values/Sheet1?key=AIzaSyBEywIz_2UCzV4rJ6pTuU-yrb7krASasjU
+    
+//const spreadsheetId = '1hUzQAQfqo9eHo3m-GnkWVFt0kjcqA3ApFfM-vl1reyE';
+const spreadsheetId = '1Cjc_EQrbpoTCCxFke542U1luakU2sdjNo8RrdcRopVQ';
+
+
+
+// Replace with your API Key
+const apiKey = 'AIzaSyBEywIz_2UCzV4rJ6pTuU-yrb7krASasjU';
+
+// Construct the URL for Google Sheets API v4
+const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/Form%20Responses%201?key=${apiKey}`;
+
+async function fetchGoogleSheetData() {
+    try {
+        // Fetch data from Google Sheets API
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        // Extract rows from the data
+        const rows = data.values;
+
+        // Get the table body element
+        const tableBody = document.querySelector('#data-table tbody');
+
+        // Loop through the rows (starting from row 1 to skip headers)
+        for (let i = 1; i < rows.length; i++) {
+            const row = document.createElement('tr');
+						
+            // Loop through each cell in the row and create a table cell for each
+			
+			
+		let j=1;
+            rows[i].forEach(cell => {
+                const cellElement = document.createElement('td');
+                if(j==5){
+					const imgElement = document.createElement('img');
+					imgElement.src = "https://lh3.googleusercontent.com/d/".concat(cell.substr(-33),"=s220");
+					imgElement.width="90";
+					imgElement.height="100";
+					cellElement.padding="0px";
+					//working <img src="https://lh3.googleusercontent.com/d/1Y7OL-TOJcAf5JDhIRvR41W9MpTi9hsMB" height="100" width="80">
+					cellElement.appendChild(imgElement);
+					row.appendChild(cellElement);
+					//https://lh3.googleusercontent.com/d/14mkZQAHFjnn1KDPltSc3xhWnZHjJoDZ3=s220
+				}
+				else if(j==1){
+					
+				}
+				/*
+				else if(j==17){
+					const imgElement = document.createElement('img');
+					imgElement.src = "https://lh3.googleusercontent.com/d/".concat(cell.substr(-33),"=s220");
+					imgElement.width="90";
+					imgElement.height="100";
+					cellElement.padding="0px";
+					//working <img src="https://lh3.googleusercontent.com/d/1Y7OL-TOJcAf5JDhIRvR41W9MpTi9hsMB" height="100" width="80">
+					cellElement.appendChild(imgElement);
+					row.append(cellElement);
+				}
+				*/
+				else{
+					cellElement.textContent = cell;
+					row.appendChild(cellElement);
+				}
+		//=IMAGE(concat("https://drive.google.com/uc?export=download&id=",right('Form Responses 1'!L2,33)))
+		//https://drive.google.com/open?id=1gJ3Y3CIg51OGKwJ5D7VsPCzjjLVFDAVV
+		    
+                //row.appendChild(cellElement);
+		j++;
+            });
+            
+			
+			const srNumber = document.createElement('td');
+						srNumber.textContent = i;
+						row.prepend(srNumber);
+			
+            // Append the row to the table
+            tableBody.appendChild(row);
+        }
+    } catch (error) {
+        console.error('Error fetching Google Sheets data:', error);
+    }
+}
+
+// Call the function to fetch and display data
+document.addEventListener('DOMContentLoaded', fetchGoogleSheetData);
+
+
+    
+</script>
+    
+
+    
+</head>
+<body>
+<!--
+<iframe src="https://drive.google.com/file/d/1Y7OL-TOJcAf5JDhIRvR41W9MpTi9hsMB/preview" width="20" height="20" allow="autoplay"></iframe>
+https://lh3.googleusercontent.com/d/1Y7OL-TOJcAf5JDhIRvR41W9MpTi9hsMB
+
+
+<img src="https://lh3.googleusercontent.com/d/1Y7OL-TOJcAf5JDhIRvR41W9MpTi9hsMB" height="100" width="80">
+
+-->
+    <table id="data-table" title="KPL 2 registration details">
+	<caption style="font-Size:80px">KPL 2 Registered Players</caption>
+        <thead>
+            <tr>
+				<th>S.No</th>
+				<th>Owner Name</th>
+                <th>Father</th>
+                <th>Team Name</th>
+                <th>payment Details</th>
+	
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+   <!-- <script src="script.js"></script> -->
+</body>
+</html>
