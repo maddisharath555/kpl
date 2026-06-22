@@ -2,29 +2,15 @@
 
 <body>
 
-	<form class='form' id="form" method="post">
+	<form class='form' id="form" action="https://script.google.com/macros/s/AKfycbzKC0tL8F0mRbAJvcWVp8Tw4nKKpd689LBF4tBay4nHNgG5OMWF-5DmgvFwJOZKAriCNA/exec" method="post">
 		<input type="text" name = "Village" Placeholder="Village"><br>
 		<input type="text" name = "Name" Placeholder="Name"><br>
 		<input type="text" name = "Profile" Placeholder="Profile"><br>
-		<input type="submit">
+		<input type="submit" name="submit">
 		
 	</form>
 	
-	<script>
-		let url='https://script.google.com/macros/s/AKfycbzCerTqtIrASYZNYFqACC-muiIYvWbMx8Pr9FKA63Dh6FHdWWIxPztXQEpsMPS0cdcagw/exec';
-		let form =document.querySelector('#form');
-		form.addEventListener("submit",(e)=>{
-			let d = new FormData(form);
-			fetch(url,{
-				method:"POST",
-				body:d}
-			).then((res)=>res.text())
-			.then((finalRes)=>console.log(finalRes))
-			e.preventDefault();
-		})	
-		
-	</script>
-		
+
 
 
 
