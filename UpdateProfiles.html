@@ -2,7 +2,7 @@
 
 <body>
 
-	<form class='form' id="form" action="https://script.google.com/macros/s/AKfycbzKC0tL8F0mRbAJvcWVp8Tw4nKKpd689LBF4tBay4nHNgG5OMWF-5DmgvFwJOZKAriCNA/exec" method="post">
+	<form class='form' id="form" action="https://script.google.com/macros/s/AKfycbwNPEqcRxFB1HHst-lH56xrxU_y2mG-ws_64X3ZSpf80xc2wkmELZb3ScM97N5B2Pnv/exec" method="post">
 		<input type="text" name = "Village" Placeholder="Village"><br>
 		<input type="text" name = "Name" Placeholder="Name"><br>
 		<input type="text" name = "Profile" Placeholder="Profile"><br>
@@ -10,9 +10,17 @@
 		
 	</form>
 	
+<script>
+function doGet() {
+  const targetUrl = "https://www.example.com"; // Put your destination URL here
+  
+  // Create an HTML output containing client-side JavaScript to change the window location
+  return HtmlService.createHtmlOutput(
+    `<script>window.top.location.href = "${targetUrl}";</script>`
+  );
+}
 
-
-
+</script>
 
 </body>
 
